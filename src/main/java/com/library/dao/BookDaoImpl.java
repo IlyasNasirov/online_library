@@ -37,4 +37,14 @@ public class BookDaoImpl implements BookDao{
         query.setParameter("bookId",id);
         query.executeUpdate();
     }
+
+    @Override
+    public List<Book> getBookByName(String nameBook) {
+        Session session=sessionFactory.getCurrentSession();
+        Query<Book> query=session.createQuery("from Book where nameBook=:name ",Book.class);
+        query.setParameter("name",nameBook);
+        List<Book> books=query.getResultList();
+
+        return books;
+    }
 }

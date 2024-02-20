@@ -4,9 +4,12 @@
 <html>
 <body>
 
+<input type="button" value="main"
+       onclick="window.location.href='main'"/>
+<br>
 <h3>This is page all_books</h3>
 <br>
-<table>
+<table >
     <tr>
         <th>Book name</th>
         <th>Author</th>
@@ -15,11 +18,13 @@
     </tr>
     <c:forEach var="book" items="${listBooks}">
 
+
         <tr>
             <td>${book.nameBook}</td>
             <td>${book.author}</td>
             <td>${book.year}</td>
             <td>${book.cost}</td>
+
 
         </tr>
 

@@ -2,7 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <body>
-
+<input type="button" value="main"
+       onclick="window.location.href='main'"/>
+<br>
 <h3>Please fill a field:</h3>
 <br>
 <form:form action="doneView" modelAttribute="newBook">

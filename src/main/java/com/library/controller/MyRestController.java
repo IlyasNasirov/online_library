@@ -44,5 +44,15 @@ public class MyRestController {
         return "book_view";
     }
 
+    @RequestMapping("/booksByName")
+    public String getBooksBySearch(@RequestParam("nameBook") String name,Model model){
+        List<Book> allBooks=bookService.getBookByName(name);
+        model.addAttribute("listBooks",allBooks);
+        return "all_books";
+    }
 
+    @GetMapping("/signup")
+    public String login(){
+        return "redirect:/main";
+    }
 }
